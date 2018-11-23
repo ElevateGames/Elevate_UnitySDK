@@ -159,19 +159,7 @@
    
    * 在`<mainifest/>`模块中添加以下activity和service
     
-```java
-    <activity android:name="com.braintreepayments.api.BraintreeBrowserSwitchActivity"
-    	android:launchMode="singleTask">
-        
-    	<intent-filter>
-    	    <action android:name="android.intent.action.VIEW" />
-    	    <data android:scheme="${applicationId}.braintree" />
-    	    <category android:name="android.intent.category.DEFAULT" />
-    	    <category android:name="android.intent.category.BROWSABLE" />
-    	</intent-filter>
-      
-    </activity>
-    
+```java    
     <activity android:name="com.elevategames.api.WebActivity"
     	android:launchMode="standard"
     	android:screenOrientation="portrait"
@@ -186,19 +174,11 @@
     	    android:name="android.support.FILE_PROVIDER_PATHS"
     	    android:resource="@xml/file_paths" />
     </provider>
-    
-    <activity android:name="com.braintreepayments.api.threedsecure.ThreeDSecureWebViewActivity"
-    	android:theme="@style/bt_three_d_secure_theme"
-    	android:screenOrientation="portrait"/>
         
     <activity android:name="com.elevategames.pay.ui.DropInActivity"
     	android:theme="@style/bt_drop_in_activity_theme"
     	android:screenOrientation="portrait"
     	android:launchMode="standard"/>
-        
-    <activity android:name="com.elevategames.pay.ui.AddCardActivity"
-    	android:theme="@style/bt_add_card_activity_theme"
-    	android:screenOrientation="portrait"/>
 
     <service android:name="com.elevategames.api.WebSocketClient" android:enabled="true"/>
 
